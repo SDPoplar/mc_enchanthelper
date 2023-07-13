@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "up": "enchanthelper:block/enchant_picker/up",
+    "down": "enchanthelper:block/enchant_picker/down",
+    "east": "enchanthelper:block/enchant_picker/common",
+    "west": "enchanthelper:block/enchant_picker/common",
+    "north": "enchanthelper:block/enchant_picker/common",
+    "south": "enchanthelper:block/enchant_picker/common"
+  }
+}

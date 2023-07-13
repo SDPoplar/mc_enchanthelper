@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ada",
+    "bhb",
+    "ccc"
+  ],
+  "key": {
+    "a": { "tag": "minecraft:planks" },
+    "b": { "item": "minecraft:book" },
+    "h": { "item": "minecraft:hopper" },
+    "c": { "item": "minecraft:obsidian" },
+    "d": { "item": "minecraft:lapis_lazuli" }
+  },
+  "result": {
+    "item": "enchanthelper:enchant_picker_item",
+    "count": 1
+  }
+}
