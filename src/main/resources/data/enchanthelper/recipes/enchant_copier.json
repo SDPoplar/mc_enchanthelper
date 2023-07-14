@@ -1,0 +1,17 @@
+{
+  "type" : "minecraft:crafting_shaped",
+  "pattern": [
+    " a ",
+    "bcb",
+    "bbb"
+  ],
+  "key": {
+    "b": { "tag": "minecraft:planks" },
+    "a": { "item": "minecraft:writable_book" },
+    "c" : { "item": "minecraft:lapis_lazuli" }
+  },
+  "result": {
+    "item": "enchanthelper:enchant_copier_item",
+    "count": 1
+  }
+}

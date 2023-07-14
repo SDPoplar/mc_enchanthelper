@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "up": "enchanthelper:block/enchant_copier/up",
+    "down": "enchanthelper:block/enchant_copier/down",
+    "east": "enchanthelper:block/enchant_copier/common",
+    "west": "enchanthelper:block/enchant_copier/common",
+    "north": "enchanthelper:block/enchant_copier/common",
+    "south": "enchanthelper:block/enchant_copier/common"
+  }
+}
