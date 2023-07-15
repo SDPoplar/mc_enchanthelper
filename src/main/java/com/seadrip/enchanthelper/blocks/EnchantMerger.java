@@ -1,7 +1,7 @@
 package com.seadrip.enchanthelper.blocks;
 
-import com.seadrip.enchanthelper.screens.MergerActionScreen;
-import net.minecraft.client.gui.screens.Screen;
+import com.seadrip.enchanthelper.menus.MergerActionMenu;
+import net.minecraft.world.MenuProvider;
 
 public class EnchantMerger extends EhHasGuiBlock {
     public EnchantMerger() {
@@ -9,7 +9,7 @@ public class EnchantMerger extends EhHasGuiBlock {
     }
 
     @Override
-    protected Screen getScreen() {
-        return new MergerActionScreen();
+    protected MenuProvider getInteractMenuProvider() {
+        return null;
     }
 }

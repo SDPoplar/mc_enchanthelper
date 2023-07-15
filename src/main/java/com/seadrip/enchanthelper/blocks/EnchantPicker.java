@@ -1,11 +1,10 @@
 package com.seadrip.enchanthelper.blocks;
 
-import com.seadrip.enchanthelper.screens.PickerActionScreen;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
@@ -24,8 +23,8 @@ public class EnchantPicker extends EhHasGuiBlock {
     }
 
     @Override
-    protected Screen getScreen() {
-        return new PickerActionScreen();
+    protected MenuProvider getInteractMenuProvider() {
+        return null;
     }
 
     @Override

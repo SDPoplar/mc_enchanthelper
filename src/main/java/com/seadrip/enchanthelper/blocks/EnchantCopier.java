@@ -1,14 +1,10 @@
 package com.seadrip.enchanthelper.blocks;
 
-import com.seadrip.enchanthelper.screens.CopierActionScreen;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
@@ -19,12 +15,8 @@ import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.Collection;
 import java.util.Map;
-import java.util.Set;
 
 public class EnchantCopier extends EhHasGuiBlock {
     public EnchantCopier() {
@@ -32,8 +24,8 @@ public class EnchantCopier extends EhHasGuiBlock {
     }
 
     @Override
-    protected Screen getScreen() {
-        return new CopierActionScreen();
+    protected MenuProvider getInteractMenuProvider() {
+        return null;
     }
 
     @Override
@@ -44,17 +36,7 @@ public class EnchantCopier extends EhHasGuiBlock {
             }
             return InteractionResult.FAIL;
         }
-        ListTag a = EnchantedBookItem.getEnchantments(player.getItemInHand(InteractionHand.MAIN_HAND));
-        /*
-        a.forEach((Tag tag) -> {
-            if(level.isClientSide) {
-                player.sendSystemMessage(Component.literal(tag.toString()));
-            }
-            tag.
-            CompoundTag ct = new CompoundTag(tag);
-            EnchantmentHelper.getEnchantmentId(tag);
-        });
-        Map<Enchantment, Integer> enchants = new Map<Enchantment, Integer>();
+        Map<Enchantment, Integer> enchants = EnchantmentHelper.getEnchantments(player.getItemInHand(InteractionHand.MAIN_HAND));
         int consumeLapis = enchants.size();
         ItemStack lapis = player.getItemInHand(InteractionHand.OFF_HAND);
         if(lapis.getCount() < consumeLapis) {
@@ -69,7 +51,6 @@ public class EnchantCopier extends EhHasGuiBlock {
             popResource(level, pos, book);
         });
         lapis.setCount(lapis.getCount() - consumeLapis);
-         */
         return InteractionResult.CONSUME;
     }
 }
