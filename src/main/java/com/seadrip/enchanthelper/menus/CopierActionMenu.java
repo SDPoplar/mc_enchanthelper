@@ -7,7 +7,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 
 public class CopierActionMenu extends AbstractContainerMenu {
-    protected CopierActionMenu(int containerId, Inventory playerInv) {
+    public CopierActionMenu(int containerId, Inventory playerInv) {
         super(EhElements.MENUS.COPIER_ACTION_MENU_TYPE.get(), containerId);
     }
 
@@ -17,7 +17,7 @@ public class CopierActionMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public boolean stillValid(Player p_38874_) {
+    public boolean stillValid(Player player) {
         return false;
     }
 }

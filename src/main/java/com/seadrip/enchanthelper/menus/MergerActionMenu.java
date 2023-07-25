@@ -4,6 +4,7 @@ import com.seadrip.enchanthelper.EhElements;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.ItemStack;
 
 public class MergerActionMenu extends AbstractContainerMenu {
@@ -12,12 +13,12 @@ public class MergerActionMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public ItemStack quickMoveStack(Player p_38941_, int p_38942_) {
+    public ItemStack quickMoveStack(Player player, int p_38942_) {
         return null;
     }
 
     @Override
-    public boolean stillValid(Player p_38874_) {
-        return false;
+    public boolean stillValid(Player player) {
+        return AbstractContainerMenu.stillValid(ContainerLevelAccess.NULL, player, EhElements.BLOCKS.ENCHANT_MERGER.get());
     }
 }
